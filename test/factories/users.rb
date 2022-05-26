@@ -4,5 +4,10 @@ FactoryBot.define do
     sequence(:uid) { |i| "uid#{i}" }
     sequence(:name) { |i| "name#{i}" }
     sequence(:image_url) { |i| "http://example.com/image#{i}.jpg"}
+    
+    trait :taro do
+      name {"匿名184"}
+      after(:build) { |user| user.make_taro_url() }
+    end
   end
 end

@@ -16,6 +16,9 @@ class User < ApplicationRecord
       user.image_url = image_url
     end
   end
+  def make_taro_url
+    self.image_url = "http://example.com/image_taro.jpg"
+  end
 
   private
 
